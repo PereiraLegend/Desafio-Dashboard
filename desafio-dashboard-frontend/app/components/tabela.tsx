@@ -6,6 +6,8 @@ import { MdEditSquare } from "react-icons/md";
 import { TbPlayerTrackNextFilled } from "react-icons/tb";
 import { TbPlayerTrackPrevFilled } from "react-icons/tb";
 import { IoIosAdd } from "react-icons/io";
+import { GiOfficeChair } from "react-icons/gi";
+import { MdGroups } from "react-icons/md";
 import axios from 'axios';
 import Link from 'next/link';
 
@@ -144,6 +146,7 @@ export default function Tabela() {
                     duration: 5000,
                     isClosable: true,
                 });
+                window.location.reload()
             } else {
                 toast({
                     title: 'Erro ao cadastrar.',
@@ -198,6 +201,7 @@ export default function Tabela() {
                     duration: 5000,
                     isClosable: true,
                 });
+                window.location.reload()
             } else {
                 toast({
                     title: 'Erro ao atualizar.',
@@ -250,7 +254,10 @@ export default function Tabela() {
                 <Flex justify="space-between" mb={4}>
                     <Flex>
                         <Input type="text" placeholder="Buscar..." className='border' value={filtro} onChange={handleFiltroChange} variant="filled" size="md" mr={2}/>
-                        <IconButton icon={<FaArrowDownAZ />} colorScheme="teal" onClick={() => funcOrdenacao('nome')}/>
+                        <IconButton icon={<FaArrowDownAZ />} colorScheme="teal" title="Ordenar por Nome" onClick={() => funcOrdenacao('nome')} mr={2}/>
+                        <IconButton icon={<GiOfficeChair />} colorScheme="teal" title="Ordenar por Cargo" onClick={() => funcOrdenacao('cargo')} mr={2}/>
+                        <IconButton icon={<MdGroups />} colorScheme="teal" title="Ordenar por Departamento" onClick={() => funcOrdenacao('departamento')}/>
+
                     </Flex>
                     <Button colorScheme="green" onClick={onModalOpen}><IoIosAdd/> Cadastrar Funcionário</Button>
                 </Flex>
