@@ -12,11 +12,13 @@ const funcionarioSchema = new Schema({
     departamento: {
         type: String,
         required: true
-    },
+    }
+    /*
     acoes: {
         type: String,
         required: true
     }
+    */
 }, { timestamps:true })
 
 const Funcionarios = mongoose.model("Funcionarios", funcionarioSchema)

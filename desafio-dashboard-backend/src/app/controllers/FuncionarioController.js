@@ -32,7 +32,7 @@ const FuncionarioController = {
                 nome: req.body.nome,
                 cargo: req.body.cargo,
                 departamento: req.body.departamento,
-                acoes: req.body.acoes
+                //acoes: req.body.acoes
             }
 
             const response = await FuncionarioModel.create(funcionarios)
@@ -51,7 +51,7 @@ const FuncionarioController = {
                 nome: req.body.nome,
                 cargo: req.body.cargo,
                 departamento: req.body.departamento,
-                acoes: req.body.acoes
+                //acoes: req.body.acoes
             }
 
             const updateFuncionario = await FuncionarioModel.findByIdAndUpdate(id, funcionario)
