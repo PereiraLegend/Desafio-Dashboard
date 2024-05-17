@@ -253,7 +253,7 @@ export default function Tabela() {
             <Box p={5}>
                 <Flex justify="space-between" mb={4}>
                     <Flex>
-                        <Input type="text" placeholder="Buscar..." className='border' value={filtro} onChange={handleFiltroChange} variant="filled" size="md" mr={2}/>
+                        <Input type="text" placeholder="Buscar nome..." className='border' value={filtro} onChange={handleFiltroChange} variant="filled" size="md" mr={2}/>
                         <IconButton icon={<FaArrowDownAZ />} colorScheme="teal" title="Ordenar por Nome" onClick={() => funcOrdenacao('nome')} mr={2}/>
                         <IconButton icon={<GiOfficeChair />} colorScheme="teal" title="Ordenar por Cargo" onClick={() => funcOrdenacao('cargo')} mr={2}/>
                         <IconButton icon={<MdGroups />} colorScheme="teal" title="Ordenar por Departamento" onClick={() => funcOrdenacao('departamento')}/>
